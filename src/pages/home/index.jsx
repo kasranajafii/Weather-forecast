@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AnimatedView from "./components/animatedView";
 import "./home.scss";
 import SideBar from "../../components/sideBar";
+import DotsMenu from "../../components/dotsMenu";
 
 const Home = () => {
     const [cityInfo, setCityInfo] = useState({});
@@ -20,6 +21,7 @@ const Home = () => {
                 unit={unit}
             />
             <AnimatedView />
+            <DotsMenu onClick={() => setSideBarStatus(true)} />
             <Status cityInfo={cityInfo} weatherInfo={weatherInfo} unit={unit} />
         </div>
     );
