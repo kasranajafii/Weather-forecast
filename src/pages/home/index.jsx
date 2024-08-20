@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AnimatedView from "./components/animatedView";
-import "./home.scss";
-import SideBar from "../../components/sideBar";
+import Status from "./components/status";
 import DotsMenu from "../../components/dotsMenu";
 import Endpoints from "../../constants/endpoints";
+import axios from "../../httpConfig";
+import { error, info } from "../../services/toastService";
+import "./home.scss";
+import SideBar from "../../components/sideBar";
 
 const Home = () => {
     const [cityInfo, setCityInfo] = useState({});
